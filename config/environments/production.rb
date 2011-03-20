@@ -53,7 +53,7 @@ TagviewTest::Application.configure do
     :port                 => 587,
     :domain               => 'tekbook.com.br',
     :user_name            => 'joaoh82@gmail.com',
-    :password             => 'jh1982',
+    :password             => 'xxxx',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 end
