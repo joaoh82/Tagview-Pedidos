@@ -29,7 +29,7 @@ TagviewTest::Application.configure do
     :port                 => 587,
     :domain               => 'mindbiz.com.br',
     :user_name            => 'joaoh82@gmail.com',
-    :password             => 'xxxx',
+    :password             => 'jh1982',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 end
