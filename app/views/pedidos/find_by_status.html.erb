@@ -15,7 +15,7 @@
     <th>Quantidade</th>
     <th>Status<br>
 			<% form_tag "/pedidos/find_by_status" do %>
-			<%= select_tag(:search_string, options_for_select([['Aberto', 'Aberto'], ['Aguardando pagamento', 'Aguardando pagamento'], ['Fechado', 'Fechado']]))%>
+			<%= select_tag(:search_string, options_for_select([['Aberto', 'Aberto'], ['Aprovando pagamento', 'Aprovando pagamento'], ['Fechado', 'Fechado']]))%>
 			<%= submit_tag "Buscar" %>
 			<% end %></th>
   </tr>
