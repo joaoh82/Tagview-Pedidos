@@ -1,6 +1,6 @@
 Sistema totalmente funcional com exceção do envio do e-mail porque logico que eu não vou colocar minha senha do 
 gmail aqui no github.
 
-Esta funcionalidade pode ser testada através da url: http://tagview_pedidos.heroku.com/
+Esta funcionalidade pode ser testada através da url: http://tagviewpedidos.heroku.com/
 
 Caso queiram testar basta ajustarem as configurações de SMTP nos seus respectivos ambientes.
