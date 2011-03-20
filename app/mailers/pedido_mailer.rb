@@ -3,7 +3,7 @@ class PedidoMailer < ActionMailer::Base
   
   def atualiza_status(pedido)
       @pedido = pedido
-      mail(:to => "joaoh82@gmail.com",
+      mail(:to => "info@tagview.com.br",
            :subject => "Tagview - Mudança de status no seu pedido")
   end
 end
