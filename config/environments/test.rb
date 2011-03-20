@@ -37,7 +37,7 @@ TagviewTest::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'tekbook.com.br',
+    :domain               => 'mindbiz.com.br',
     :user_name            => 'joaoh82@gmail.com',
     :password             => 'jh1982',
     :authentication       => 'plain',
