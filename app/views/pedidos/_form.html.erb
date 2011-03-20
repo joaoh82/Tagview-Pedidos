@@ -1,0 +1,29 @@
+<% content_for :head do %>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<%= javascript_include_tag "jquery.numeric" %>
+<% end %>
+
+<%= form_for @pedido do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :referencia %><br />
+    <%= f.text_field :referencia %>
+  </p>
+  <p>
+    <%= f.label :qtde, "Quantidade" %><br />
+    <%= f.text_field :qtde, :class => "integer"%>
+  </p>
+  <p><%= f.submit "Salvar" %></p>
+<% end %>
+
+<script type="text/javascript">
+	$(".numeric").numeric();
+	$(".integer").numeric(false, function() { alert("Integers only"); this.value = ""; this.focus(); });
+	$("#remove").click(
+		function(e)
+		{
+			e.preventDefault();
+			$(".numeric,.integer").removeNumeric();
+		}
+	);
+	</script>

@@ -1,0 +1,9 @@
+one:
+  referencia: MyString
+  qtde: 1
+  status: MyString
+
+two:
+  referencia: MyString
+  qtde: 1
+  status: MyString

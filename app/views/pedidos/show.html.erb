@@ -1,0 +1,24 @@
+<% content_for :head do %>
+<%= javascript_include_tag "prototype_temp" %>
+<% end %>
+
+<% title "Pedido" %>
+
+<p>
+  <strong>Referencia:</strong>
+  <%= @pedido.referencia %>
+</p>
+<p>
+  <strong>Quantidade:</strong>
+  <%= @pedido.qtde %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= @pedido.status %>
+</p>
+
+<p>
+  <%= link_to "Editar", edit_pedido_path(@pedido) %> |
+  <%= link_to "Apagar", @pedido, :confirm => 'Tem certeza?', :method => :delete %> |
+  <%= link_to "Visualizar todos", pedidos_path %>
+</p>

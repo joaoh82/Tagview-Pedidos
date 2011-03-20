@@ -1,0 +1,27 @@
+<% content_for :head do %>
+<%= javascript_include_tag "prototype_temp" %>
+<% end %>
+
+<% title "Pedidos" %>
+
+<table class="table">
+  <tr>
+	<th>ID</th>
+    <th>Referencia</th>
+    <th>Quantidade</th>
+    <th>Status</th>
+  </tr>
+  <% for pedido in @pedidos %>
+    <tr>
+	  <td><%= pedido.id %></td>
+      <td><%= pedido.referencia %></td>
+      <td><%= pedido.qtde %></td>
+      <td><%= link_to pedido.status, :controller => "pedidos", :action => "atualiza_status", :id => pedido.id %></td>
+      <td><%= link_to "Detalhes", pedido %></td>
+      <td><%= link_to "Editar", edit_pedido_path(pedido) %></td>
+      <td><%= link_to "Apagar", pedido, :confirm => 'Tem certeza?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Novo Pedido", new_pedido_path %></p>
