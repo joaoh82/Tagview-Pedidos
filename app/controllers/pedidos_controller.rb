@@ -20,6 +20,18 @@ class PedidosController < ApplicationController
 
     redirect_to pedidos_url
   end
+  
+  def find_by_status
+    like = params[:search_string].concat("%")
+    @pedidos = Pedido.find(:all, :conditions => ["status LIKE ?", like], :order => "created_at")
+    
+  end
+  
+  def find_by_ref
+    like = params[:search_string].concat("%")
+    @pedidos = Pedido.find(:all, :conditions => ["referencia LIKE ?", like], :order => "created_at")
+    
+  end
 
   def index
     @pedidos = Pedido.all
